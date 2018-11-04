@@ -15,4 +15,4 @@
  */
 
 enableFeaturePreview('GRADLE_METADATA')
-include ':android', ':ios', ':common'
+include ':multiplatform-preferences-common', ':android', ':ios'

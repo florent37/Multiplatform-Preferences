@@ -1,40 +1,42 @@
-apply plugin: 'org.jetbrains.kotlin.platform.native'
+apply plugin: "kotlin-platform-common"
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 group rootProject.ext.libraryGroup
 version rootProject.ext.libraryVersion
+//artifactId "multiplatform-preferences-common"
 
-sourceSets {
-    main {
-        component {
-            baseName.set("multiplatform-preferences-ios")
-            targets = ['ios_arm64', 'ios_x64']
-            outputKinds = [KLIBRARY]
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifactId "multiplatform-preferences-common"
         }
     }
 }
 
 dependencies {
-    expectedBy project(':multiplatform-preferences-common')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
 }
 
-components.main {
-    extraOpts '-Xuse-experimental=kotlin.Experimental'
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompileCommon) { task ->
+    kotlinOptions {
+        freeCompilerArgs = ['-Xuse-experimental=kotlin.Experimental']
+    }
 }
 
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'multiplatform-preferences-ios'
+    bintrayName = 'multiplatform-preferences-common'
     orgName = 'florent37'
 
     publishedGroupId = rootProject.ext.libraryGroup
-    libraryName = 'Multiplatform-Preferences-ios'
-    artifact = 'multiplatform-preferences-ios'
+    libraryName = 'Multiplatform-Preferences-common'
+    artifact = 'multiplatform-preferences-common'
 
-    libraryDescription = 'Multiplatform-Preferences-ios'
+    libraryDescription = 'Multiplatform-Preferences'
 
     siteUrl = 'https://github.com/florent37/Multiplatform-Preferences'
     gitUrl = 'https://github.com/florent37/Multiplatform-Preferences.git'
@@ -50,4 +52,6 @@ ext {
     allLicenses = ["Apache-2.0"]
 }
 
+
 apply from: rootProject.file('gradle/publish.gradle')
+
