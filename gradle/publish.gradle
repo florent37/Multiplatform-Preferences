@@ -1,23 +1,3 @@
-def pomConfig = {
-    licenses {
-        license {
-            name "The Apache Software License, Version 2.0"
-            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
-            distribution "repo"
-        }
-    }
-    developers {
-        developer {
-            id "florent37"
-            name "Florent Champigny"
-        }
-    }
-    scm {
-        url "https://github.com/florent37/multiplatform-preferences"
-    }
-}
-
-
 def _user = System.getenv("BINTRAY_USER")
 def _key =  System.getenv("BINTRAY_API_KEY")
 def _passphrase = System.getenv("BINTRAY_PASSPHRASE")
@@ -35,41 +15,24 @@ if(project.rootProject.file('local.properties').exists() && (_user == null || _u
 bintray {
     user = _user
     key = _key
-    override = true
+    publish = true
     //configurations = ['archives']
     pkg {
-        repo = bintrayRepo
-        name = bintrayName
-        desc = libraryDescription
-        userOrg = orgName
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        licenses = allLicenses
         publish = true
-        publicDownloadNumbers = true
+
+        repo = "multiplatform-preferences"
+        name = "multiplatform-preferences"
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/russhwolf/multiplatform-preferences'
         version {
-            desc = libraryDescription
+            desc = "multiplatform-preferences"
+            /*
             gpg {
                 sign = true //Determines whether to GPG sign the files. The default is false
                 passphrase = _passphrase
                 //Optional. The passphrase for GPG signing'
             }
+            */
         }
     }
-}
-
-afterEvaluate {
-    project.publishing.publications.forEach { publication ->
-        publication.pom.withXml {
-            def root = asNode()
-            root.appendNode('name', project.name)
-            root.appendNode('description', 'Persisting settings on Android and iOS')
-            root.appendNode('url', 'https://github.com/florent37/multiplatform-preferences')
-            root.children().last() + pomConfig
-        }
-    }
-}
-
-bintrayUpload.doFirst {
-    publications = project.publishing.publications
-}
+}mit -

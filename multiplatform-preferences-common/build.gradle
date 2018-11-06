@@ -7,6 +7,8 @@ group rootProject.ext.libraryGroup
 version rootProject.ext.libraryVersion
 //artifactId "multiplatform-preferences-common"
 
+apply from: rootProject.file('gradle/pomconfig.gradle')
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
@@ -25,33 +27,6 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompileCommon) { task ->
         freeCompilerArgs = ['-Xuse-experimental=kotlin.Experimental']
     }
 }
-
-
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'multiplatform-preferences-common'
-    orgName = 'florent37'
-
-    publishedGroupId = rootProject.ext.libraryGroup
-    libraryName = 'Multiplatform-Preferences-common'
-    artifact = 'multiplatform-preferences-common'
-
-    libraryDescription = 'Multiplatform-Preferences'
-
-    siteUrl = 'https://github.com/florent37/Multiplatform-Preferences'
-    gitUrl = 'https://github.com/florent37/Multiplatform-Preferences.git'
-
-    libraryVersion = rootProject.ext.libraryVersion
-
-    developerId = 'florent37'
-    developerName = 'florent37'
-    developerEmail = 'champigny.florent@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
 
 apply from: rootProject.file('gradle/publish.gradle')
 

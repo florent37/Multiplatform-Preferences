@@ -7,6 +7,9 @@ apply plugin: 'com.jfrog.bintray'
 group rootProject.ext.libraryGroup
 version rootProject.ext.libraryVersion
 
+apply from: rootProject.file('gradle/pomconfig.gradle')
+
+
 task sourcesJar(type: Jar) {
     classifier = 'sources'
     from android.sourceSets.main.java.srcDirs
@@ -45,31 +48,6 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) { task ->
     kotlinOptions {
         freeCompilerArgs = ['-Xuse-experimental=kotlin.Experimental']
     }
-}
-
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'multiplatform-preferences-android'
-    orgName = 'florent37'
-
-    publishedGroupId = rootProject.ext.libraryGroup
-    libraryName = 'Multiplatform-Preferences-android'
-    artifact = 'multiplatform-preferences-android'
-
-    libraryDescription = 'Multiplatform-Preferences-Android'
-
-    siteUrl = 'https://github.com/florent37/Multiplatform-Preferences'
-    gitUrl = 'https://github.com/florent37/Multiplatform-Preferences.git'
-
-    libraryVersion = rootProject.ext.libraryVersion
-
-    developerId = 'florent37'
-    developerName = 'florent37'
-    developerEmail = 'champigny.florent@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
 }
 
 apply from: rootProject.file('gradle/publish.gradle')

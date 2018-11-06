@@ -3,10 +3,17 @@ buildscript {
         maven { url 'https://dl.bintray.com/jetbrains/kotlin-native-dependencies' }
         google()
         jcenter()
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_version"
+        classpath("org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_native_version") {
+            exclude group: 'org.jetbrains.kotlin', module: 'kotlin-gradle-plugin'
+        }
         classpath "com.android.tools.build:gradle:$gradle_android_version"
         classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$bintray_plugin_version"
     }
@@ -17,10 +24,15 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
     }
 }
 
 ext {
     libraryGroup = "com.github.florent37"
-    libraryVersion = '0.0.3'
+    libraryVersion = '0.0.7'
 }
