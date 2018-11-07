@@ -1,6 +1,0 @@
-//include ':myapplication'
-rootProject.name = 'multiplatform-preferences'
-enableFeaturePreview('GRADLE_METADATA')
-
-include 'multiplatform-preferences-ios'
-include 'multiplatform-preferences-android'
