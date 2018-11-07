@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
 
-@class AppMainPresenter, AppMultiplatform_preferences_nativePreferences, AppSample, AppPlatform, AppProxy, AppKotlinArray;
+@class AppMainPresenter, AppSample, AppPlatform, AppProxy, AppKotlinArray;
 
-@protocol AppKotlinIterator;
+@protocol AppMainView, AppKotlinIterator;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -141,12 +141,21 @@ __attribute__((swift_name("KotlinBoolean")))
 + (instancetype)numberWithBool:(BOOL)value;
 @end;
 
+__attribute__((swift_name("MainView")))
+@protocol AppMainView
+@required
+- (void)displayNameName:(NSString *)name __attribute__((swift_name("displayName(name:)")));
+@end;
+
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("MainPresenter")))
 @interface AppMainPresenter : KotlinBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@property (readonly) AppMultiplatform_preferences_nativePreferences *preferences;
+- (void)bindView:(id<AppMainView>)view __attribute__((swift_name("bind(view:)")));
+- (void)unbind __attribute__((swift_name("unbind()")));
+- (void)saveName:(NSString *)name __attribute__((swift_name("save(name:)")));
+- (void)load __attribute__((swift_name("load()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -179,30 +188,6 @@ __attribute__((swift_name("SampleKt")))
 @interface AppSampleKt : KotlinBase
 + (NSString *)hello __attribute__((swift_name("hello()")));
 + (void)mainArgs:(AppKotlinArray *)args __attribute__((swift_name("main(args:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Multiplatform_preferences_nativePreferences")))
-@interface AppMultiplatform_preferences_nativePreferences : KotlinBase
-- (instancetype)initWithName:(NSString * _Nullable)name __attribute__((swift_name("init(name:)"))) __attribute__((objc_designated_initializer));
-- (void)clear __attribute__((swift_name("clear()")));
-- (AppBoolean * _Nullable)getBooleanKey:(NSString *)key __attribute__((swift_name("getBoolean(key:)")));
-- (BOOL)getBooleanKey:(NSString *)key defaultValue:(BOOL)defaultValue __attribute__((swift_name("getBoolean(key:defaultValue:)")));
-- (AppFloat * _Nullable)getFloatKey:(NSString *)key __attribute__((swift_name("getFloat(key:)")));
-- (float)getFloatKey:(NSString *)key defaultValue:(float)defaultValue __attribute__((swift_name("getFloat(key:defaultValue:)")));
-- (AppInt * _Nullable)getIntKey:(NSString *)key __attribute__((swift_name("getInt(key:)")));
-- (int32_t)getIntKey:(NSString *)key defaultValue:(int32_t)defaultValue __attribute__((swift_name("getInt(key:defaultValue:)")));
-- (AppLong * _Nullable)getLongKey:(NSString *)key __attribute__((swift_name("getLong(key:)")));
-- (int64_t)getLongKey:(NSString *)key defaultValue:(int64_t)defaultValue __attribute__((swift_name("getLong(key:defaultValue:)")));
-- (NSString * _Nullable)getStringKey:(NSString *)key __attribute__((swift_name("getString(key:)")));
-- (NSString *)getStringKey:(NSString *)key defaultValue:(NSString *)defaultValue __attribute__((swift_name("getString(key:defaultValue:)")));
-- (BOOL)hasKeyKey:(NSString *)key __attribute__((swift_name("hasKey(key:)")));
-- (void)removeKey:(NSString *)key __attribute__((swift_name("remove(key:)")));
-- (void)setBooleanKey:(NSString *)key value:(BOOL)value __attribute__((swift_name("setBoolean(key:value:)")));
-- (void)setFloatKey:(NSString *)key value:(float)value __attribute__((swift_name("setFloat(key:value:)")));
-- (void)setIntKey:(NSString *)key value:(int32_t)value __attribute__((swift_name("setInt(key:value:)")));
-- (void)setLongKey:(NSString *)key value:(int64_t)value __attribute__((swift_name("setLong(key:value:)")));
-- (void)setStringKey:(NSString *)key value:(NSString *)value __attribute__((swift_name("setString(key:value:)")));
 @end;
 
 __attribute__((objc_subclassing_restricted))

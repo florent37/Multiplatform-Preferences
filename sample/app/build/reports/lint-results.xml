@@ -15,7 +15,7 @@
         errorLine2="     ~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/Users/florentchampigny/Desktop/sample/app/src/main/AndroidManifest.xml"
+            file="/Users/florentchampigny/android/multiplatform-preferences/sample/app/src/main/AndroidManifest.xml"
             line="5"
             column="6"/>
     </issue>
@@ -34,7 +34,7 @@
         errorLine2="     ~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/Users/florentchampigny/Desktop/sample/app/src/main/AndroidManifest.xml"
+            file="/Users/florentchampigny/android/multiplatform-preferences/sample/app/src/main/AndroidManifest.xml"
             line="5"
             column="6"/>
     </issue>
@@ -53,7 +53,7 @@
         errorLine2="    ^"
         quickfix="studio">
         <location
-            file="/Users/florentchampigny/Desktop/sample/app/src/main/AndroidManifest.xml"
+            file="/Users/florentchampigny/android/multiplatform-preferences/sample/app/src/main/AndroidManifest.xml"
             line="5"
             column="5"/>
     </issue>

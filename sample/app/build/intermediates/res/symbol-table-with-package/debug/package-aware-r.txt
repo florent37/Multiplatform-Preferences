@@ -692,6 +692,7 @@ id default_activity_button
 id dimensions
 id direct
 id disableHome
+id edit
 id edit_query
 id end
 id expand_activities_button
@@ -712,11 +713,13 @@ id image
 id info
 id invisible
 id italic
+id label
 id left
 id line1
 id line3
 id listMode
 id list_item
+id load
 id message
 id middle
 id multiply
@@ -736,6 +739,7 @@ id radio
 id right
 id right_icon
 id right_side
+id save
 id screen
 id scrollIndicatorDown
 id scrollIndicatorUp

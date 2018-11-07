@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="sample.SampleTestsAndroid" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-07T16:06:43" hostname="MacBook-Pro-de-florent.local" time="0.01">
+<testsuite name="sample.SampleTestsAndroid" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-07T20:54:26" hostname="MBP-de-florent" time="0.012">
   <properties/>
-  <testcase name="testHello" classname="sample.SampleTestsAndroid" time="0.01"/>
+  <testcase name="testHello" classname="sample.SampleTestsAndroid" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
