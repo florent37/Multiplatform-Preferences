@@ -1,7 +1,5 @@
 # Multiplatform Preferences
 
-**Work In Progress**
-
 Use a single object : `Preferences` in your kotlin shared projects
 
 Compatible with kotlin android and kotlin native for iphone
@@ -23,13 +21,6 @@ class MyPresenter {
 
 
 # Download
-
-Add the repository
-```groovy
-repositories {
-    maven { url  "https://dl.bintray.com/florent37/maven" }
-}
-```
 
 ## common
 ```groovy
