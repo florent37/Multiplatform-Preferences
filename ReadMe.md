@@ -22,6 +22,13 @@ class MyPresenter {
 
 # Download
 
+Add the repository
+```groovy
+repositories {
+    maven { url  "https://dl.bintray.com/florent37/maven" }
+}
+```
+
 ## common
 ```groovy
 implementation "com.gitub.florent37:multiplatform-preferences:1.0.0"
