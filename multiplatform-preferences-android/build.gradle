@@ -8,36 +8,7 @@ android {
     }
 }
 
-task sourcesJar(type: Jar) {
-    classifier = 'sources'
-    from android.sourceSets.main.java.srcDirs
-}
-
-artifacts {
-    archives sourcesJar
-}
-
-publishing {
-    publications {
-        android(MavenPublication) {
-            //artifact("$buildDir/outputs/aar/multiplatform-preferences-android-release.aar")
-            artifact("$buildDir/outputs/aar/multiplatform-preferences-android-debug.aar")
-            //artifact sourcesJar
-            groupId
-            //artifactId 'multiplatform-preferences-android'
-            version project.version
-        }
-    }
-}
-
 dependencies {
-    expectedBy project(':multiplatform-preferences-common')
-
+    expectedBy project(":")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-}
-
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) { task ->
-    kotlinOptions {
-        freeCompilerArgs = ['-Xuse-experimental=kotlin.Experimental']
-    }
 }

@@ -1,3 +1,0 @@
-apply plugin: 'maven-publish'
-apply plugin: 'maven'
-apply from: "$rootDir/gradle/pom.gradle"

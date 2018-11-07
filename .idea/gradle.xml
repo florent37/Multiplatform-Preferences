@@ -9,8 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/multiplatform-preferences-android" />
-            <option value="$PROJECT_DIR$/multiplatform-preferences-common" />
-            <option value="$PROJECT_DIR$/multiplatform-preferences-ios" />
+            <option value="$PROJECT_DIR$/multiplatform-preferences-native" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
