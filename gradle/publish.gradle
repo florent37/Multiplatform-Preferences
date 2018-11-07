@@ -1,0 +1,8 @@
+
+publishing {
+    repositories {
+        maven {
+            url  = 'https://dl.bintray.com/florent37/multiplatform-preferences'
+        }
+    }
+}

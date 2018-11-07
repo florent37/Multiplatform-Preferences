@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sample.SampleTestsAndroid" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-07T16:06:44" hostname="MacBook-Pro-de-florent.local" time="0.008">
+  <properties/>
+  <testcase name="testHello" classname="sample.SampleTestsAndroid" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

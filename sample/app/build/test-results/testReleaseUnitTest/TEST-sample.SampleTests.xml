@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sample.SampleTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-11-07T16:06:44" hostname="MacBook-Pro-de-florent.local" time="0.018">
+  <properties/>
+  <testcase name="testProxy" classname="sample.SampleTests" time="0.017"/>
+  <testcase name="testMe" classname="sample.SampleTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

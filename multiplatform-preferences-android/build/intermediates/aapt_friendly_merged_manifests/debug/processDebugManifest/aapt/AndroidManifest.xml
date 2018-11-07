@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.github.florent37.preferences" >
+
+    <uses-sdk android:minSdkVersion="15" />
+
+    <application>
+        <provider
+            android:name="com.github.florent37.preferences.AppContextProvider"
+            android:authorities="dollar_openBracket_applicationId_closeBracket.appcontextprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="900"
+            tools:ignore="UnusedAttribute" />
+    </application>
+
+</manifest>
