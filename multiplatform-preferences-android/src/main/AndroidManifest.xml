@@ -1,0 +1,16 @@
+<manifest package="com.github.florent37.preferences"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+
+    <application>
+        <provider
+                android:name=".AppContextProvider"
+                android:authorities="${applicationId}.appcontextprovider"
+                android:directBootAware="true"
+                android:exported="false"
+                android:initOrder="900"
+                tools:ignore="UnusedAttribute"/>
+    </application>
+
+</manifest>
