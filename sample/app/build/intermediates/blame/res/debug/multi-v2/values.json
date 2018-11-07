@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/florentchampigny/Desktop/sample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/florentchampigny/android/multiplatform-preferences/sample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/Users/florentchampigny/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b6a3d5f15324cd3c99e4b4c47b9dcbbc/res/values/values.xml",
@@ -61,26 +61,7 @@
                     }
                 },
                 {
-                    "source": "/Users/florentchampigny/Desktop/sample/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "53",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "178"
-                    },
-                    "to": {
-                        "startLines": "1845",
-                        "startColumns": "4",
-                        "startOffsets": "108582",
-                        "endLines": "1847",
-                        "endColumns": "12",
-                        "endOffsets": "108707"
-                    }
-                },
-                {
-                    "source": "/Users/florentchampigny/Desktop/sample/app/src/main/res/values/strings.xml",
+                    "source": "/Users/florentchampigny/android/multiplatform-preferences/sample/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -113,6 +94,25 @@
                         "endLines": "175,176,864,1053,1085,1122,1129,1735,1736,1737,1738,1739,1740,1741,1751,1752,1753,1754,1755,1756,1757,1758,1759,1760,1761,1762,1763,1764,1765,1774,1775,1781,1782,1786,1787,1788,1789,1790,1791,1797,1839,3157,3161,3162,3166,3167,3304,3305",
                         "endColumns": "68,62,24,24,24,24,24,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66",
                         "endOffsets": "9121,9184,46555,63677,65742,67502,67879,101355,101423,101495,101565,101626,101700,101773,102618,102679,102741,102805,102867,102928,102996,103096,103156,103222,103295,103364,103421,103473,103535,104060,104136,104410,104445,104637,104698,104755,104789,104824,104859,105204,108135,195948,196149,196259,196460,196589,207487,207554"
+                    }
+                },
+                {
+                    "source": "/Users/florentchampigny/android/multiplatform-preferences/sample/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "53",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "178"
+                    },
+                    "to": {
+                        "startLines": "1845",
+                        "startColumns": "4",
+                        "startOffsets": "108582",
+                        "endLines": "1847",
+                        "endColumns": "12",
+                        "endOffsets": "108707"
                     }
                 }
             ]

@@ -27,13 +27,13 @@ class MyPresenter {
 Add the repository
 ```groovy
 repositories {
-    maven { url  "https://dl.bintray.com/florent37/multiplatform-preferences" }
+    maven { url  "https://dl.bintray.com/florent37/maven" }
 }
 ```
 
 ## common
 ```groovy
-implementation "com.gitub.florent37:multiplatform-preferences:0.0.15"
+implementation "com.gitub.florent37:multiplatform-preferences:1.0.0"
 ```
 
 ## ios
@@ -41,7 +41,7 @@ implementation "com.gitub.florent37:multiplatform-preferences:0.0.15"
 Uses inside the NSUserDefaults
 
 ```groovy
-implementation "com.gitub.florent37:multiplatform-preferences-native:0.0.15"
+implementation "com.gitub.florent37:multiplatform-preferences-native:1.0.0"
 ```
 
 ## android
@@ -49,7 +49,7 @@ implementation "com.gitub.florent37:multiplatform-preferences-native:0.0.15"
 Uses inside the SharedPreferences
 
 ```groovy
-implementation "com.gitub.florent37:multiplatform-preferences-android:0.0.15"
+implementation "com.gitub.florent37:multiplatform-preferences-android:1.0.0"
 ```
 
 ## Methods

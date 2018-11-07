@@ -28,7 +28,7 @@ plugins {
 
 static def platformOf(project) {
     if (project.name.endsWith("-common")) return "common"
-    if (project.name.endsWith("-native")) return "native"
+    if (project.name.endsWith("-ios")) return "native"
     if (project.name.endsWith("-android")) return "android"
     return "common"
 }
@@ -108,15 +108,13 @@ allprojects {
     task sourceJar(type: Jar, dependsOn: classes) {
         classifier 'sources'
         if (platform != 'native') {
-            if(platform.equals("android")){
+            if(platform == "android"){
                 from android.sourceSets.main.java.srcDirs
             } else {
                 from sourceSets.main.kotlin
             }
             duplicatesStrategy DuplicatesStrategy.EXCLUDE
             if(platform.equals("android")){
-                def platformSrc = android.sourceSets.main.java.srcDirs
-                def commonSrc = rootProject.sourceSets.main.allSource
                 from android.sourceSets.main.java.srcDirs
             } else {
                 def platformSrc = sourceSets.main.allSource
@@ -134,15 +132,14 @@ allprojects {
     tasks.build.dependsOn(['sourceJar', 'emptyJar'])
 }
 
-def skipPublish = ['benchmarks']
-configure(allprojects.findAll { !skipPublish.contains(it.name) }) {
+configure(allprojects) {
     apply from: rootProject.file('pom.gradle')
     apply from: rootProject.file('gradle/bintray.gradle')
 
     publishing {
         publications {
             mavenProject(MavenPublication) {
-                if (!project.name.contains('native') && !project.name.endsWith('android')) {
+                if (!project.name.contains('ios') && !project.name.endsWith('android')) {
                     from components.java
                 }
 

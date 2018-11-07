@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/florentchampigny/Desktop/sample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml",
+            "outputFile": "/Users/florentchampigny/android/multiplatform-preferences/sample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml",
             "map": [
                 {
                     "source": "/Users/florentchampigny/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/48b823d6c1132b56ce9c6a3c2207eacc/res/values-de/values-de.xml",
