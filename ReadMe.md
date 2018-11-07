@@ -39,7 +39,7 @@ implementation "com.gitub.florent37:multiplatform-preferences:1.0.0"
 Uses inside the NSUserDefaults
 
 ```groovy
-implementation "com.gitub.florent37:multiplatform-preferences-native:1.0.0"
+implementation "com.gitub.florent37:multiplatform-preferences-ios:1.0.0"
 ```
 
 ## android
