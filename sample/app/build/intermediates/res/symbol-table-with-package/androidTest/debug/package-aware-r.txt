@@ -1,1 +1,0 @@
-org.jetbrains.kotlin.mpp_app_android.test
