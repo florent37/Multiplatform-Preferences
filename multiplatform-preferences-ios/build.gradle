@@ -1,0 +1,44 @@
+apply plugin: "kotlin-platform-native"
+
+sourceSets {
+    main {
+        component {
+            outputKinds = [KLIBRARY]
+            baseName.set("multiplatform-preferences-ios")
+            targets = ['ios_arm64', 'ios_x64']
+
+            publishSources = false
+            publishJavadoc = false
+
+            extraOpts "-Xuse-experimental=kotlin.Experimental",
+                    "-Xuse-experimental=kotlin.experimental.ExperimentalTypeInference"
+                    /*
+                    "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                    "-Xuse-experimental=kotlinx.coroutines.ObsoleteCoroutinesApi",
+                    "-Xuse-experimental=kotlinx.coroutines.InternalCoroutinesApi"
+                    */
+        }
+    }
+}
+
+dependencies {
+    expectedBy project(':multiplatform-preferences-common')
+}
+
+task sourceJar(type: Jar) {
+    classifier = 'sources'
+}
+
+artifacts {
+    archives sourceJar
+}
+
+tasks.build.dependsOn(['sourceJar'])
+
+publishing {
+    publications {
+        mavenProject(MavenPublication) {
+            artifact sourceJar
+        }
+    }
+}

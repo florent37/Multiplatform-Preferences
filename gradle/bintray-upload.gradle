@@ -1,3 +1,5 @@
+apply plugin: 'com.jfrog.bintray'
+
 def _user = System.getenv("BINTRAY_USER")
 def _key =  System.getenv("BINTRAY_API_KEY")
 def _passphrase = System.getenv("BINTRAY_PASSPHRASE")
@@ -11,21 +13,31 @@ if(project.rootProject.file('local.properties').exists() && (_user == null || _u
     _passphrase = properties.getProperty("bintray.gpg.password")
 }
 
-
 bintray {
     user = _user
     key = _key
+    override = true // for multi-platform Kotlin/Native publishing
+
     publish = true
-    //configurations = ['archives']
+
     pkg {
         publish = true
 
+        userOrg = 'florent37'
         repo = "multiplatform-preferences"
         name = "multiplatform-preferences"
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/russhwolf/multiplatform-preferences'
+        vcsUrl = 'https://github.com/florent37/MultiplatformPreferences'
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/florent37/MultiplatformPreferences'
+        websiteUrl = 'https://github.com/florent37/MultiplatformPreferences'
+
         version {
-            desc = "multiplatform-preferences"
+            name = project.version
+            vcsTag = project.version
+            released = new Date()
+
             /*
             gpg {
                 sign = true //Determines whether to GPG sign the files. The default is false
@@ -34,5 +46,16 @@ bintray {
             }
             */
         }
+    }
+}
+
+// This is required for K/N publishing
+bintrayUpload.dependsOn publishToMavenLocal
+
+// This is for easier debugging of bintray uploading problems
+bintrayUpload.doFirst {
+    publications = project.publishing.publications.findAll { !it.name.contains('-test') }.collect {
+        println("Uploading artifact '$it.groupId:$it.artifactId:$it.version' from publication '$it.name'")
+        it
     }
 }

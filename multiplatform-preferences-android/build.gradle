@@ -1,14 +1,12 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-platform-android'
-apply plugin: 'maven'
-apply plugin: 'maven-publish'
-apply plugin: 'com.jfrog.bintray'
 
-group rootProject.ext.libraryGroup
-version rootProject.ext.libraryVersion
-
-apply from: rootProject.file('gradle/pomconfig.gradle')
-
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 15
+    }
+}
 
 task sourcesJar(type: Jar) {
     classifier = 'sources'
@@ -22,19 +20,13 @@ artifacts {
 publishing {
     publications {
         android(MavenPublication) {
-            artifact("$buildDir/outputs/aar/android-release.aar")
-            artifact sourcesJar
+            //artifact("$buildDir/outputs/aar/multiplatform-preferences-android-release.aar")
+            artifact("$buildDir/outputs/aar/multiplatform-preferences-android-debug.aar")
+            //artifact sourcesJar
             groupId
-            artifactId 'multiplatform-preferences-android'
-            version rootProject.ext.libraryVersion
+            //artifactId 'multiplatform-preferences-android'
+            version project.version
         }
-    }
-}
-
-android {
-    compileSdkVersion 28
-    defaultConfig {
-        minSdkVersion 15
     }
 }
 
@@ -49,5 +41,3 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) { task ->
         freeCompilerArgs = ['-Xuse-experimental=kotlin.Experimental']
     }
 }
-
-apply from: rootProject.file('gradle/publish.gradle')
