@@ -81,14 +81,10 @@ class Preferences(name: String? = null) {
     fun hasKey(key: String): Boolean
 }
 ```
-
-## TODO
-
-Add a sample
  
 ## License
         
-    Copyright 2017 Russell Wolf
+    Copyright 2018 Florent37
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
