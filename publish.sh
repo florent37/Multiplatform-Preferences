@@ -2,4 +2,4 @@
 ./gradlew clean
 ./gradlew build
 ./gradlew publishToMavenLocal
-#./gradlew bintrayUpload
+./gradlew bintrayUpload
