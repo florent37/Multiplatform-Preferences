@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences.iml" filepath="$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences.iml" />
-      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences-android/Multiplatform-Preferences-multiplatform-preferences-android.iml" filepath="$PROJECT_DIR$/multiplatform-preferences-android/Multiplatform-Preferences-multiplatform-preferences-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences-ios/Multiplatform-Preferences-multiplatform-preferences-ios.iml" filepath="$PROJECT_DIR$/multiplatform-preferences-ios/Multiplatform-Preferences-multiplatform-preferences-ios.iml" />
       <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences.iml" filepath="$PROJECT_DIR$/multiplatform-preferences.iml" />
-      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences-android/multiplatform-preferences-android.iml" filepath="$PROJECT_DIR$/multiplatform-preferences-android/multiplatform-preferences-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences-ios/multiplatform-preferences-ios.iml" filepath="$PROJECT_DIR$/multiplatform-preferences-ios/multiplatform-preferences-ios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences_commonMain.iml" filepath="$PROJECT_DIR$/multiplatform-preferences_commonMain.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences_commonTest.iml" filepath="$PROJECT_DIR$/multiplatform-preferences_commonTest.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences_iosArm64Main.iml" filepath="$PROJECT_DIR$/multiplatform-preferences_iosArm64Main.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences_iosArm64Test.iml" filepath="$PROJECT_DIR$/multiplatform-preferences_iosArm64Test.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences_iosMain.iml" filepath="$PROJECT_DIR$/multiplatform-preferences_iosMain.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences_iosTest.iml" filepath="$PROJECT_DIR$/multiplatform-preferences_iosTest.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences_iosX64Main.iml" filepath="$PROJECT_DIR$/multiplatform-preferences_iosX64Main.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/multiplatform-preferences_iosX64Test.iml" filepath="$PROJECT_DIR$/multiplatform-preferences_iosX64Test.iml" group="multiplatform-preferences" />
     </modules>
   </component>
 </project>
