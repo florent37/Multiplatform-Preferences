@@ -30,8 +30,6 @@ plugins {
 }
 
 apply plugin: 'com.android.library'
-//apply plugin: 'maven'
-//apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
 android {

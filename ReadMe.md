@@ -31,7 +31,7 @@ repositories {
 
 ## common
 ```groovy
-implementation "com.github.florent37:multiplatform-preferences:1.0.0"
+implementation "com.github.florent37:multiplatform-preferences:1.2.0"
 ```
 
 ## ios
@@ -39,7 +39,7 @@ implementation "com.github.florent37:multiplatform-preferences:1.0.0"
 Uses inside the NSUserDefaults
 
 ```groovy
-implementation "com.github.florent37:multiplatform-preferences-ios:1.0.0"
+implementation "com.github.florent37:multiplatform-preferences-ios:1.2.0"
 ```
 
 ## android
@@ -47,7 +47,7 @@ implementation "com.github.florent37:multiplatform-preferences-ios:1.0.0"
 Uses inside the SharedPreferences
 
 ```groovy
-implementation "com.github.florent37:multiplatform-preferences-android:1.0.0"
+implementation "com.github.florent37:multiplatform-preferences-android:1.2.0"
 ```
 
 ## Methods
