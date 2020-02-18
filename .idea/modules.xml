@@ -3,6 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences.iml" filepath="$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosArm64Main.iml" filepath="$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosArm64Main.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosArm64Test.iml" filepath="$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosArm64Test.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosMain.iml" filepath="$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosMain.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosTest.iml" filepath="$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosTest.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosX64Main.iml" filepath="$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosX64Main.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosX64Test.iml" filepath="$PROJECT_DIR$/Multiplatform-Preferences-multiplatform-preferences_iosX64Test.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_commonMain.iml" filepath="$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_commonMain.iml" group="multiplatform-preferences" />
+      <module fileurl="file://$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_commonTest.iml" filepath="$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_commonTest.iml" group="multiplatform-preferences" />
       <module fileurl="file://$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_iosArm64Main.iml" filepath="$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_iosArm64Main.iml" group="multiplatform-preferences" />
       <module fileurl="file://$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_iosArm64Test.iml" filepath="$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_iosArm64Test.iml" group="multiplatform-preferences" />
       <module fileurl="file://$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_iosMain.iml" filepath="$PROJECT_DIR$/com.github.florent37-multiplatform-preferences_iosMain.iml" group="multiplatform-preferences" />
